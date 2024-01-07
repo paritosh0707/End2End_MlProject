@@ -1,6 +1,6 @@
 from MlProject.constants import *
 from MlProject.utils.common import read_yaml, create_directories
-from MlProject.entity.config_entity import DataIngestionConfig, DataValidationConfig
+from MlProject.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
 from pathlib import Path
 
 class ConfigurationManager:
@@ -42,7 +42,7 @@ class ConfigurationManager:
             all_schema = schema
         )
         return data_validation_config
-        
+
 
     def get_data_transformation_config(self) -> DataTransformationConfig:
         config = self.config.data_transformation
